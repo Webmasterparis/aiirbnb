@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
-
-
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-ssh-doctor'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger', '>= 0.1.1'
+end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
@@ -38,18 +42,24 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-group :development, :test do
+# group :development, :test do
 # gem 'byebug'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
+gem 'nokogiri'
+
+group :development, :test do 
+    gem 'sqlite3'
 end
 
+gem 'devise'
+
+
+ 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.18'
   gem 'rails_12factor'
 end
-  
+
   
 
 

@@ -54,7 +54,7 @@ end
 gem 'devise'
 gem 'devise-i18n'
 
-
+gem "paperclip"
  
 group :production do
   gem 'pg', '~> 0.18'
